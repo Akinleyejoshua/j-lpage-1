@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*:hover {
+    outline: none;
+}
+
+header {
+    padding: 1rem 3rem;
+    box-shadow: 0 0 10pc rgba(0, 0, 0, 0.2);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-btn,
+.close-btn {
+    display: none;
+    opacity: 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    margin-right: 1rem;
+}
+
+.navbar a:hover{
+    opacity: .5;
+}
+
+.hero{
+    position: relative;
+}
+
+.hero-content{
+    background: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    place-items: center;
+    justify-content: center;
+}
+
+.hero-content h1{
+    color: white;
+    font-size: 3rem;
+}
+
+.hero img{
+    height: 90vh;
+    width: 100%;
+}
+
+.items{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-gap: 2.5rem;
+    padding: 1rem;
+}
+
+#news{
+    padding: 3rem;
+}
+
+.heading{
+    text-align: center;
+    color: royalblue;
+    padding: 1rem;
+}
+
+.item{
+    border-radius: .25rem;
+    box-shadow: 0 0 10pc rgba(0, 0, 0, 0.2);
+}
+
+.item img{
+    width: 100%;
+    height: 20rem;
+}
+
+.item h3{
+    padding: 1rem;
+    color: royalblue;
+}
+
+.item p{
+    padding: 1rem;
+}
+
+.item a{
+    padding: 1rem;
+    background: whitesmoke;
+    text-decoration: none;
+    border-radius: .25rem;
+}
+
+footer{
+    padding: 1rem;
+    text-align: center;
+    color: white;
+    background: royalblue;
+}
+
+form{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+}
+
+input, textarea{
+    border: none;
+    background: whitesmoke;
+    border-radius: .25rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+
+button{
+    background: royalblue;
+    color: white;
+    border-radius: .25rem;
+    border: none;
+    padding: 1rem;
+}
+
+.actions{
+    display: flex;
+    padding: 1rem;
+}
+
+.actions i{
+    color: royalblue;
+    margin-right: 1rem;
+}
+
+@media screen and (max-width: 740px) {
+    header {
+        padding: 1rem;
+    }
+
+    nav {
+        flex-direction: column;
+        position: relative;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        height: 0rem;
+        transition: 0.3s;
+        overflow: hidden;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .menu-btn,
+    .close-btn {
+        position: absolute;
+        right: 0.5rem;
+        opacity: 1;
+        top: 0.3rem;
+        align-self: center;
+    }
+
+    .hero-content h1{
+        font-size: 1.5rem;
+    }
+}
